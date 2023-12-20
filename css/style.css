@@ -1,0 +1,357 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Open+Sans&display=swap");
+
+/* BS icon */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css");
+
+/* ---------------- */
+/* ----- MAIN ----- */
+/* ---------------- */
+:root {
+  --bg-asparagus: #577356;
+  --imageWidth: 356;
+  --imageHeight: 267;
+}
+
+.bg-richblack {
+  background-color: #04030f;
+}
+
+.bg-asparagus {
+  background-color: var(--bg-asparagus);
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875rem;
+}
+
+/* navbar */
+.navbar {
+  transition: 0.2s linear;
+}
+
+.offcanvas {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.navbar a:hover {
+  color: antiquewhite;
+}
+
+.navbar-brand,
+.offcanvas,
+.offcanvas a {
+  color: antiquewhite;
+}
+
+.navbar a::after,
+.offcanvas .navbar-nav a::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid white;
+  transition: 0.2s linear;
+  transform: scaleX(0);
+}
+
+.offcanvas.show .navbar-nav a::after {
+  transform-origin: 0 0;
+}
+.navbar a:hover::after,
+.navbar .navbar-nav a:hover::after,
+.offcanvas.show .navbar .navbar-nav a::after {
+  transform: scaleX(0.5);
+}
+
+/* hero */
+.hero {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+  color: antiquewhite;
+}
+
+.hero-inner {
+  position: relative;
+  left: 10%;
+  top: 30%;
+  width: fit-content;
+}
+
+/* parallax */
+.parallax {
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 500px;
+}
+
+/* lightbox */
+/* Lightbox */
+.lightbox .modal-body {
+  padding: 2rem 0px;
+}
+
+.lightbox .modal-dialog {
+  margin: auto;
+}
+
+.lightbox .carousel-item img {
+  object-fit: contain;
+  height: 100vh;
+  width: 100%;
+  aspect-ratio: var(--imageWidth) / var(--imageHeight);
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 15%;
+}
+
+.footer {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.footer a {
+  text-decoration: none;
+  color: black;
+}
+
+/* info */
+.info-main {
+  margin-top: 2rem;
+}
+
+.info-main .title .col {
+  height: fit-content;
+  width: fit-content;
+  padding: 0.25rem 0px;
+}
+
+.info-main .info .nav {
+  justify-content: space-evenly;
+}
+
+.info {
+  margin-top: 2rem;
+}
+
+.info .nav-link {
+  color: black;
+}
+
+.info .nav-link,
+.info .nav-link.active {
+  width: 100%;
+}
+
+.info .nav-pills .nav-link:hover {
+  color: white;
+  background-color: #7b8c79;
+}
+
+.info .nav-pills .nav-link.active,
+.info .nav-pills .show > .nav-link {
+  color: white;
+  background-color: var(--bg-asparagus);
+}
+
+.info .price-box {
+  height: auto;
+  background-color: white;
+  padding: 1rem;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+}
+
+.info .btn-submit {
+  background-color: var(--bg-asparagus);
+  color: white;
+  font-weight: bold;
+  width: 100%;
+  border-radius: 5rem;
+  margin-top: 1rem;
+}
+
+.info .btn-submit:hover {
+  color: var(--bg-asparagus);
+  background-color: white;
+  border-color: var(--bg-asparagus);
+}
+
+/* ---------------- */
+/* ----- HOME ----- */
+/* ---------------- */
+/* hero */
+.hero.home {
+  background-image: linear-gradient(180deg, rgba(1, 1, 1, 0.5) 0%, rgba(0, 0, 0, 0.4) 25%, rgba(255, 255, 255, 0) 100%), url("../img/hero-1.png");
+  background-position: center center;
+}
+
+/* parallax */
+.parallax.satu {
+  background-image: url("../img/2.jpg");
+}
+
+/* galeri */
+.galeri .row {
+  row-gap: 1rem;
+}
+
+.image-container {
+  max-width: calc(var(--imageWidth) * 1px);
+  max-height: 100%;
+  aspect-ratio: var(--imageWidth) / var(--imageHeight);
+  margin: 0 auto;
+}
+
+.image {
+  display: block;
+  height: 100%;
+  aspect-ratio: var(--imageWidth) / var(--imageHeight);
+  object-fit: cover;
+  border-radius: 0.3rem;
+  margin: 0 auto;
+}
+
+.image:hover {
+  cursor: pointer;
+  transform: scale(102%);
+  transition: 0.3s all;
+  opacity: 0.5;
+}
+
+/* END HOME */
+
+/* ---------------- */
+/* ----- PAKET ---- */
+/* ---------------- */
+/* paket */
+.paket {
+  margin-top: 1.5rem;
+}
+
+.paket .img-wrapper {
+  overflow: hidden;
+}
+
+.paket img {
+  object-fit: cover;
+  height: calc(15rem + 1.2vh);
+  object-position: center center;
+}
+
+.paket img:hover {
+  transition: 0.3s all;
+  transform: scale(110%);
+}
+
+.paket a {
+  color: black;
+}
+
+.paket .card a .fs-6 {
+  margin-top: 0.5rem;
+  text-indent: 1em;
+  background-color: var(--bg-asparagus);
+  font-weight: bold;
+  color: antiquewhite;
+  position: relative;
+  padding: 0.3rem 0;
+  left: 1em;
+}
+
+.paket .card {
+  overflow: hidden;
+}
+
+.paket .card .card-body {
+  padding-top: 0;
+}
+
+/* ---------------- */
+/* ---- CONTACT --- */
+/* ---------------- */
+.image-wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.img-inner {
+  display: block;
+  object-fit: cover;
+  object-position: bottom;
+  height: 90%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ---------------- */
+/* ----- BROMO ---- */
+/* ---------------- */
+.hero.bromo {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.2) 15%, rgba(255, 255, 255, 0) 100%), url("../img/b4.jpg");
+  background-position: center 55%;
+}
+
+/* ---------------- */
+/* -- TUMPAK SEWU - */
+/* ---------------- */
+.hero.tumpak {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.2) 15%, rgba(255, 255, 255, 0) 100%), url("../img/tumpaksewu.jpg");
+  background-position: 53% bottom;
+}
+
+/* ---------------- */
+/* - TUMPAK & BROMO */
+/* ---------------- */
+.hero.tumpak-bromo {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.2) 15%, rgba(255, 255, 255, 0) 100%), url("../img/tumpaksewu.jpg");
+  background-position: 54% bottom;
+}
+
+.info .accordion-button {
+  padding: 0.25rem 0px;
+}
+
+.info .accordion-button::after {
+  display: none;
+}
+
+.info .accordion-button:not(.collapse) {
+  background-color: transparent;
+}
+
+/* ---------------- */
+/* ----- JOGJA ---- */
+/* ---------------- */
+.hero.jogja {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.2) 15%, rgba(255, 255, 255, 0) 100%), url("../img/GettyImages-700713456-5ab0e1298023b90036dbab7e.jpg");
+  background-position: center;
+}
+
+.jogja .hero-inner {
+  position: absolute;
+  top: unset;
+  bottom: 15%;
+}
+/* ---------------- */
+/* -- MEDIA QUERY - */
+/* ---------------- */
+@media (max-width: 991px) {
+}
+
+@media (max-width: 768px) {
+  .parallax {
+    background-attachment: scroll;
+    height: 350px;
+  }
+}
+
+@media (max-width: 576px) {
+}
