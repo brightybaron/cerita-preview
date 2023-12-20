@@ -274,6 +274,10 @@ body {
   padding-top: 0;
 }
 
+.paket.tour .row {
+  row-gap: 1rem;
+}
+
 /* ---------------- */
 /* ---- CONTACT --- */
 /* ---------------- */
